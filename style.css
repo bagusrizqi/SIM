@@ -1,0 +1,294 @@
+/* ================================
+   RESET & BASE STYLE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+  background: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.menu a {
+  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  color:#4361ee;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+  height: 90vh;
+  min-height: 600px;
+  background: url('img/avanza.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  color: #4361ee;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn-wa-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: #25d366;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  transition: 0.3s;
+}
+
+.btn-wa-hero:hover {
+  background: #1da851;
+  transform: translateY(-4px);
+}
+
+/* ================================
+   ARMADA SECTION
+================================ */
+.armada {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #222;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.armada-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+}
+
+.card-img {
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.08);
+}
+
+.card-body {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 800;
+  color:#4361ee;
+  margin-bottom: 20px;
+}
+
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background: #4361ee;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  transition: 0.3s;
+}
+
+.btn-wa:hover {
+  background: #4361ee;
+  transform: translateY(-3px);
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+
+/* ================================
+   TOMBO LOGIN USER (ganti menu ID)
+================================ */
+.login-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  background: #4361ee;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 110, 255, 0.3);
+  margin-left: 25px; /* jarak dari menu sebelumnya */
+}
+
+.login-btn:hover {
+  background:#4361ee;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 153, 255, 0.4);
+}
+
+.login-btn svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* Responsif Mobile - tetap cantik di HP */
+@media (max-width: 768px) {
+  .login-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    margin-left: 10px;
+  }
+  .login-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+  
+  /* Kalau layar terlalu kecil, menu jadi kolom (opsional) */
+  .menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .armada-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .menu a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+}
